@@ -40,3 +40,15 @@ The connection was not closed by the application and is garbage collected [90018
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
 	... 13 more
+2024-03-13 21:04:58.617323+02:00 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "NOTE" уже существует
+Table "NOTE" already exists; SQL statement:
+CREATE TABLE note (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT
+) [42101-224]
+2024-03-13 21:04:58.619318+02:00 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "[*]NOTE"
+Syntax error in SQL statement "[*]NOTE"; SQL statement:
+NOTE [42000-224]

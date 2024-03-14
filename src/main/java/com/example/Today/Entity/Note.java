@@ -5,7 +5,6 @@ package com.example.Today.Entity;
         import jakarta.persistence.Id;
 @Entity
 
-//@Table(name = "Note")
 public class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
