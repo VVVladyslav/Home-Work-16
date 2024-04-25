@@ -38,13 +38,11 @@ public class SecurityConfig {
         return http.build();
     }
 
-    // Define the PasswordEncoder bean
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    // Configure the UserDetails service for JDBC authentication
     @Bean
     public UserDetailsService userDetailsService() {
         var userDetailsManager = new JdbcUserDetailsManager(dataSource);
